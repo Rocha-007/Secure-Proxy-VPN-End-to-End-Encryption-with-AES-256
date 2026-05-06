@@ -28,17 +28,23 @@ Um sistema de proxy com criptografia AES-256 que demonstra conceitos fundamentai
 pip install -r requirements.txt
 ```
 
-### 2. Executar o servidor proxy
+### 2. Usar a aplicação interativa (Opção recomendada)
+```bash
+python main.py
+```
+Digite sua mensagem e a aplicação vai encriptar/descriptografar em tempo real!
+
+### 3. Usar o proxy servidor (Avançado)
 ```bash
 python server.py --port 9999 --target 127.0.0.1 8888
 ```
 
-### 3. Conectar um cliente
+### 4. Conectar um cliente ao proxy (Avançado)
 ```bash
-python client.py --proxy 127.0.0.1 9999 --message "Olá, mundo seguro!"
+python client.py --proxy 127.0.0.1 9999 --message "Sua mensagem aqui"
 ```
 
-### 4. Executar testes
+### 5. Executar testes
 ```bash
 pytest tests/ -v
 ```
@@ -55,8 +61,9 @@ secure-proxy-vpn/
 ├── tests/
 │   ├── __init__.py
 │   └── test_encryption.py # Testes unitários
-├── server.py              # Entry point servidor
-├── client.py              # Entry point cliente
+├── main.py                # Aplicação interativa (recomendada)
+├── server.py              # Entry point servidor proxy (avançado)
+├── client.py              # Entry point cliente proxy (avançado)
 ├── requirements.txt
 └── README.md
 ```
