@@ -1,0 +1,54 @@
+# .gitignore - Secure Proxy VPN
+
+# Ambiente Virtual Python
+venv/
+env/
+ENV/
+*.pyc
+__pycache__/
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+logs/
+
+# Dados sensíveis
+.env
+.env.local
+secrets.txt
+credentials.txt
+config.local.py
+
+# Testes
+.pytest_cache/
+htmlcov/
+.tox/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# OS
+Thumbs.db
+.DS_Store
